@@ -1,0 +1,31 @@
+.silver-price {
+  background-image: url("/img/silver.jpg");
+  background-size: cover; /* изображение будет масштабироваться, чтобы умещаться в экран, сохраняя пропорции */
+  background-position: center; /* центрируем изображение */
+  background-repeat: no-repeat;
+  color: black;
+}
+
+.gold-price {
+  background-image: url("/img/gold.jpg");
+  background-size: cover; /* изображение будет масштабироваться, чтобы умещаться в экран, сохраняя пропорции */
+  background-position: center; /* центрируем изображение */
+  background-repeat: no-repeat;
+  color: gold;
+}
+
+.gold-price p {
+  font-size: 100px;
+  text-align: center;
+}
+
+.gold-price h3,
+.gold-price p,
+.gold-price span {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.silver-price p {
+  font-size: 100px;
+  text-align: center;
+}

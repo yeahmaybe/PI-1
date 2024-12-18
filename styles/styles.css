@@ -1,0 +1,106 @@
+/* Основные стили для главной страницы */
+body {
+  font-family: "Helvetica", sans-serif;
+  background: linear-gradient(
+    to bottom,
+    rgb(255, 255, 255),
+    rgb(220, 220, 220)
+  );
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+header {
+  text-align: center;
+  width: 95vw;
+  padding: 10px;
+  height: 70px;
+  max-height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul {
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(20px);
+
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  backdrop-filter: blur(10px);
+}
+
+/* Эффект наведения для ссылок */
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s;
+  line-height: 50px;
+  display: inline;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Настройки таблицы */
+table {
+  border-collapse: collapse;
+  border: 0;
+}
+
+th,
+td {
+  border-left: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+table tr:first-child td {
+  border-top: 0;
+}
+td:first-child {
+  border-left: 0;
+}
+
+ol,
+ul {
+  padding: 0;
+}
+
+/* Начальное состояние для текстов */
+.card h3 {
+  display: inline-block; /* Для корректной трансформации */
+  transform: skewX(-10deg); /* Наклон текста, похожий на курсив */
+  transition: transform 0.3s ease-in-out, font-size 0.3s ease-in-out; /* Плавная анимация */
+  font-size: 1.2em; /* Стандартный размер текста */
+}
+
+/* Эффект при наведении */
+.card:hover h3 {
+  transform: skewX(0deg) scale(1.1); /* Убираем наклон и увеличиваем текст */
+  font-size: 1.3em; /* Слегка увеличиваем размер текста */
+}
+
+.card {
+  box-sizing: border-box;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.2);
+}
+
+nav ul li.current a {
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.1);
+}
